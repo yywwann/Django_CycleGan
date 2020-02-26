@@ -6,10 +6,6 @@ from PIL import Image
 import uuid
 
 
-def index(request):
-    return render(request, 'cyclegan/index.html', context={
-    })
-
 
 def resize_image(img_path, new_height, new_width):
     try:
@@ -33,7 +29,7 @@ def resize_image(img_path, new_height, new_width):
         print(e)
 
 
-def upload(request):
+def index(request):
     if request.method == 'POST':
         # 1.获取用户上传的文件
         files = request.FILES.getlist('files')

@@ -18,6 +18,8 @@ tf.flags.DEFINE_string('input', 'input_sample.jpg', 'input image path (.jpg)')
 tf.flags.DEFINE_string('output', 'output_sample.jpg', 'output image path (.jpg)')
 tf.flags.DEFINE_integer('image_size', '256', 'image size, default: 256')
 tf.flags.DEFINE_string('b', 'b', 'model path (.pb)')
+tf.flags.DEFINE_string('k', 'k', 'model path (.pb)')
+tf.flags.DEFINE_string('w', 'w', 'model path (.pb)')
 def inference():
   graph = tf.Graph()
 
