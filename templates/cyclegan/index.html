@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container">
+      <div class="heading-wrapper">
+        <h1>基于GAN的图像风格转换</h1>
+        <p></p>
+{#        <a href="#blog" class="primary-btn">Pricing</a>#}
+{#        <a href="#footer" class="secondary-btn">Get in touch</a>#}
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+<section id="blog">
+    <div class="container">
+        <div class="heading-wrapper">
+
+        <h1>试一试风格转换</h1>
+        <p>加入一张图片, 然后选择你要转换的对象</p>
+{#        <div>#}
+            {%for image in images %}
+                <img src="{{image }}">
+            {%endfor %}
+{#        </div>#}
+       </div>
+    </div>
+</section>
+
+<section id="blog">
+    <div class="container">
+        <div class="heading-wrapper">
+
+
+            <form action="/show" method="post" enctype="multipart/form-data">
+                {%csrf_token %}
+                <div class="upload-content">
+                    <div class="content-img">
+                        <ul class="content-img-list">
+                            <!-- <li class="content-img-list-item"><img src="https://www.baidu.com/img/bd_logo1.png" alt=""><a class="delete-btn"><i class="ico-delete"></i></a></li> -->
+                        </ul>
+                        <div class="file">
+                            <i class="ico-plus"></i>上传图片，支持jpg/png<input type="file" name="files" accept="image/*" id="upload" >
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-submit">
+    {#                 <a href="javascript:;" id="btn-submit-upload" class="btn-submit-upload">提交</a>#}
+                    <button type="submit" name="apple2orange" class="primary-btn">苹果转橘子</button>
+                    <button type="submit" name="orange2apple" class="primary-btn">橘子转苹果</button><br>
+                    <button type="submit" name="horse2zebra" class="primary-btn">马转斑马</button>
+                    <button type="submit" name="zebra2horse" class="primary-btn">斑马转马</button><br>
+                    <button type="submit" name="summer2winter" class="primary-btn">夏天转冬天</button>
+                    <button type="submit" name="winter2summer" class="primary-btn">冬天转夏天</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- Frequently Asked Questions -->
+  <section id="faq">
+    <div class="container">
+      <div class="heading-wrapper">
+        <h2>F. A. Q. </h2>
+        <p></p>
+      </div>
+      <div id="accordion" class="topmargin-lg">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <i class="icon ion-md-add-circle"></i> 什么是GANS(Generative Adversarial Newtorks)?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              GANs 简单的想法就是用两个模型，一个生成模型，一个判别模型。 判别模型用于判断一个给定的图片是不是真实的图片（从数据集里获取的图片），生成模型 的任务是去创造一个看起来像真的图片一样的图片。而在开始的时候这两个模型都是没有经 过训练的，这两个模型一起对抗训练，生成模型产生一张图片去欺骗判别模型，然后判别模 型去判断这张图片是真是假，最终在这两个模型训练的过程中，两个模型的能力越来越强， 最终达到稳态。
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <i class="icon ion-md-add-circle"></i> 什么是CycleGan?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              CycleGAN是一个环形的结构，主要由两个生成器及两个判别器组成，如上图所示。X表示X域的图像，Y表示Y域的图像。X域的图像通过生成器G生成Y域的图像，再通过生成器F重构回X域输入的原图像；Y域的图像通过生成器F生成X域图像，再通过生成器G重构回Y域输入的原图像。判别器Dx和Dy起到判别作用，确保图像的风格迁移。
+            </div>
+          </div>
+        </div>
+{#        <div class="card">#}
+{#          <div class="card-header" id="headingThree">#}
+{#            <h5 class="mb-0">#}
+{#              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">#}
+{#                <i class="icon ion-md-add-circle"></i> Can I cancel my plan at anytime?#}
+{#              </button>#}
+{#            </h5>#}
+{#          </div>#}
+{#          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">#}
+{#            <div class="card-body">#}
+{#              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non mi massa. Morbi maximus#}
+{#              tempus sapien sed lacinia. Ut feugiat libero non sollicitudin pharetra. Integer scelerisque#}
+{#              sapien non felis porta, ac maximus neque malesuada.#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+      </div>
+    </div>
+  </section>
+  <!-- End Frequently Asked Questions -->
+
+{% endblock main %}
+

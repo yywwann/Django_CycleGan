@@ -1,0 +1,101 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="" />
+  <meta name="description" content="">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="{% static 'cyclegan/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'cyclegan/css/upload.css' %}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto" rel="stylesheet">
+
+  <!-- Ionic icons -->
+  <link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static 'cyclegan/img/favicon.png' %}">
+
+  <title>Creative Agency Template - Themes Bootstrap</title>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'cyclegan:index' %}"><img src="{% static 'cyclegan/img/logo.svg' %}" id="logo" class="img-fluid" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="icon ion-md-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'cyclegan:index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">风格转换</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">F.A.Q</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  {% block main %}
+  {% endblock main %}
+
+
+
+
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="container">
+      <div class="heading-wrapper">
+{#        <h3>Ready to start your project?</h3>#}
+{#        <p>Ready to start your next project with us? Just send us an email with a brief description of your#}
+{#          project and we'll get back to you.</p>#}
+{#        <a href="#" class="primary-btn">GitHub</a>#}
+      </div>
+      <div class="row topmargin-lg">
+        <div class="col-md-4">
+          <small>© Creative Agency 2020</small>
+        </div>
+        <div class="col-md-4">
+          <a href="#"><i class="icon ion-logo-instagram"></i></a>
+          <a href="#"><i class="icon ion-logo-linkedin"></i></a>
+          <a href="#"><i class="icon ion-logo-facebook"></i></a>
+
+        </div>
+        <div class="col-md-4">
+{#          <small>More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small>#}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Footer -->
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="{% static 'cyclegan/js/upload.js' %}"></script>
+</body>
+
+</html>

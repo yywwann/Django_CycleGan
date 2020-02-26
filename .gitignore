@@ -1,1 +1,6 @@
 *.pb
+media/*.jpg
+media/*.png
+media/*.jpeg
+**/__pycache__
+*.DS_Store
