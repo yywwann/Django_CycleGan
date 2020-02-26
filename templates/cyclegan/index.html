@@ -48,18 +48,32 @@
         </div>
         <div class="upload-submit">
           {#                 <a href="javascript:;" id="btn-submit-upload" class="btn-submit-upload">提交</a>#}
-          <button type="submit" name="apple2orange" class="primary-btn">苹果转橘子</button>
-          <button type="submit" name="orange2apple" class="primary-btn">橘子转苹果</button><br>
-          <button type="submit" name="horse2zebra" class="primary-btn">马转斑马</button>
-          <button type="submit" name="zebra2horse" class="primary-btn">斑马转马</button><br>
-          <button type="submit" name="summer2winter" class="primary-btn">夏天转冬天</button>
-          <button type="submit" name="winter2summer" class="primary-btn">冬天转夏天</button>
+          <button type="submit" name="apple2orange" class="primary-btn" onclick="Load()">苹果转橘子</button>
+          <button type="submit" name="orange2apple" class="primary-btn" onclick="Load()">橘子转苹果</button><br>
+          <button type="submit" name="horse2zebra" class="primary-btn" onclick="Load()">马转斑马</button>
+          <button type="submit" name="zebra2horse" class="primary-btn" onclick="Load()">斑马转马</button><br>
+          <button type="submit" name="summer2winter" class="primary-btn" onclick="Load()">夏天转冬天</button>
+          <button type="submit" name="winter2summer" class="primary-btn" onclick="Load()">冬天转夏天</button>
         </div>
       </form>
     </div>
   </div>
 </section>
-
+<div id="loading" hidden style="opacity: 0%;">
+    <div id="loading-center">
+      <div id="loading-center-absolute">
+        <div class="object" id="object_one"></div>
+        <div class="object" id="object_two"></div>
+        <div class="object" id="object_three"></div>
+        <div class="object" id="object_four"></div>
+        <div class="object" id="object_five"></div>
+        <div class="object" id="object_six"></div>
+        <div class="object" id="object_seven"></div>
+        <div class="object" id="object_eight"></div>
+        <div class="object" id="object_nine"></div>
+      </div>
+    </div>
+  </div>
 
 
 <!-- Frequently Asked Questions -->
